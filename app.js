@@ -4,8 +4,6 @@ var router = express.Router();
 
 app.set('view engine', 'ejs');
 
-app.use('/', routes);
-
 app.get('/', (req, res) => {
     res.render(__dirname + '/views/index.ejs');
 });
