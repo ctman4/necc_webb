@@ -1,8 +1,11 @@
 const express = require('express');
 const app = express();
+var router = express.Router();
 
-app.get('/', (req, res) => {
-    res.render('/views/index.html');
+app.use('/', routes);
+
+router.get('/', function(req, res, next) {
+    res.render('index', {title: 'Express'});
 });
 
 app.listen(5000, () => {
