@@ -2,7 +2,7 @@ const express = require('express');
 const app = express();
 
 app.get('/', (req, res) => {
-    res.send('<h1>My Node App</h1>');
+    res.render('/views/index.html');
 });
 
 app.listen(5000, () => {
