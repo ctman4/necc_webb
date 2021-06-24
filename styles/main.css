@@ -1,0 +1,391 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+
+html, body{
+    height: 100%;
+    position: relative;
+    font-family: sans-serif;
+}
+
+.main-container {
+    min-height: 100vh; /* will cover the 100% of viewport */
+    overflow: hidden;
+    display: block;
+    position: relative;
+    padding-bottom: 300px; /* height of your footer */
+}
+.wood-bg {
+    min-height: 100vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.596), rgba(0, 0, 0, 0.527)), url(wood-planks.jpg);
+    width: 100%;
+    background-position: center;
+    background-size: cover;
+}
+
+.navbar-brand{
+    font-family: 'Raleway', sans-serif;
+    color: rgb(244,244,244);
+    font-size: Large;
+}
+
+.hero{
+    background: linear-gradient(rgba(0, 0, 0, 0.596), rgba(0, 0, 0, 0.527)), url(wood-planks.jpg);
+    height: 80vh;
+    width: 100%;
+    align-content: center;
+    background-position: center;
+    background-size: cover;
+    box-sizing: border-box;
+    position: relative;
+}
+
+.hero img{
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    bottom: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+}
+
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 20px;
+    position: relative;
+    z-index: 1;
+}
+
+.logo{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 50%;
+}
+
+nav ul{
+    flex: 1;
+    text-align: right;
+    font-family: 'Open Sans', sans-serif;
+}
+
+nav ul li{
+    display: inline-block;
+    list-style: none;
+    margin: 10px 25px;
+    font-weight: 2;
+}
+
+nav ul li a{
+    color: #fff;
+    text-decoration: none;
+}
+
+nav ul li a:hover{
+    color: #204714
+}
+
+.upload-btn{
+    background: #204714;
+    color:#fff;
+    text-decoration: none;
+    padding: 10px 40px;
+    border-radius: 30px;
+    margin-left: 25px;
+    transition: transform 0.5s;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.upload-btn:hover{
+    transform: scale(0.9);
+}
+.carousel{
+  background-color: rgb(19,19,19);
+}
+
+.slideshow{
+  padding-top: 50px;
+  padding-bottom: 50px;
+  max-width: 50%;
+  position: relative;
+  margin: auto;
+  text-align: center;
+
+}
+
+.slideshow img{
+  width: 100%;
+  height: 80%;
+  max-height: 600px;
+  filter: opacity(50%);
+
+
+}
+
+.slideshow .image-text{
+    color: rgb(244,244,244);
+    font-family: 'Raleway', sans-serif;
+    font-size: 22px;
+    font-weight: 400;
+    padding: 8px 12px;
+    position: absolute;
+    bottom: 8vh;
+    width: 100%;
+    text-align: center;
+    text-decoration: underline;
+}
+
+.slideshow a{
+  color: rgb(244,244,244);
+}
+
+.slideshow h2{
+    color: rgb(244,244,244);
+    font-family: 'Raleway', sans-serif;
+    font-size: 26px;
+    margin-top: 100px;
+    font-weight: 300;
+    
+}
+
+.slideshow p{
+    color: #fff;
+    font-weight: 300;
+    font-size: 16px;
+    font-family: 'Raleway', sans-serif;
+    padding: 10px;
+    margin: 20px 40px;
+    padding-bottom: 75px;
+
+}
+
+.slideshow .fa{
+    padding:100px;
+    padding-bottom:0px;
+    font-size: 30px;
+}
+.contact{
+  padding-top: 0px;
+}
+
+.contact-info p{
+  color: rgb(23,23,23);
+  font-weight: 300;
+  font-size: 16px;
+  margin: 20px 12px;
+  font-family: sans-serif;
+  padding: 10px;
+}
+
+.contact-info i{
+  padding-top: 40px;
+}
+.contact-writing{
+  text-align: center;
+  color: rgb(23,23,23);
+  margin: 20px 12px;
+  font-family: 'Raleway', sans-serif;
+  font-size: 26px;
+  padding: 20px;
+  margin-bottom:20px;
+}
+
+.masonary{
+    display:flex;
+    flex-flow: column wrap;
+    max-height: 1500px;
+    margin: auto;
+    width: 100%;
+}
+.m-block{
+    width: 33.33%;
+    padding: 12px;
+    box-sizing: border-box
+}
+.m-block img{
+    width: 100%;
+    cursor: pointer;
+}
+.m-block img:hover{
+    transform: scale(1.05);
+}
+.explore-btn{
+    display: block;
+    width: 50%;
+    max-width: 350px;
+    background: #204714;
+    color: #fff;
+    text-decoration: none;
+    text-align: center;
+    padding: 14px 0;
+    border-radius: 30px;
+    margin: 60px auto;
+    font-size: 18px;
+    transition: transform 0.5s;
+}
+
+.explore-btn:hover{
+    transform: scale(0.9);
+}
+
+.about{
+    background-color: rgb(244,244,244);
+    height: auto;
+    width: 100%;
+    background-position: center;
+    background-size: cover;
+    box-sizing: border-box;
+    padding-left: 20%;
+    padding-right: 20%;
+    padding-top: 300px;
+    padding-bottom: 300px;
+    text-align: center;
+    
+
+}
+
+.about-page{
+    background-color: rgb(244,244,244);
+    width: 60%;
+    max-width: auto;
+    background-position: center;
+    background-size: cover;
+    box-sizing: border-box;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    text-align: center;
+    margin: auto;
+    margin-top: 20%;
+    margin-bottom: 20%;
+    height: auto;
+    padding: 10px;
+    position: relative;
+    align-items: center;
+}
+
+.about img {
+    max-width: 80%;
+    padding-bottom: 40px;
+    
+}
+
+
+.about h2{
+    color: rgb(23,23,23);
+    margin: 20px 12px;
+    font-family: 'Raleway', sans-serif;
+    font-size: 26px;
+    padding: 20px;
+}
+
+.about p{
+    color: rgb(23,23,23);
+    font-weight: light;
+    font-size: 16px;
+    margin: 20px 12px;
+    font-family: sans-serif;
+    padding: 10px;
+
+}
+
+
+
+#container {
+    max-width: 60%; /* Can be in percentage also. */
+    height: auto;
+    margin: 0 auto;
+    padding: 10px;
+    position: relative;
+    align-items: center;
+}
+
+.btn-spacer{
+    padding: 5% 0;
+}
+.fa {
+  color: white;
+}
+
+footer{
+    font-family: sans-serif;
+    padding-top: 50px;
+    color: rgb(244,244,244);
+    background-color:rgb(19,19,19);
+    text-align: center;
+    text-decoration: none;
+    font-style: normal;
+    font-weight:500;
+    bottom: 0;
+    position: absolute;
+    width: 100%;
+}
+
+footer a{
+    padding: 15px;
+    padding-bottom:50px;
+    width: 50px;
+    color: white;
+
+}
+
+footer p{
+    padding: 10px;
+}
+
+footer .fa{
+    font-size: 20px;
+    color: rgb(244,244,244);
+}
+
+/* Add a hover effect if you want */
+footer .fa:hover {
+  opacity: 0.7;
+}
+
+.gallery {
+  margin: 100px 50px;
+}
+.gallery img {
+  transition: 1s;
+  padding-bottom: 50px;;
+  max-width: 100%;
+  align-self: center;
+  border: 5px rgb(244, 244, 244);
+}
+
+.gallery img:hover {
+  transform: scale(1.1);
+}
+
+.img-container {
+  text-align: center;
+
+}
+
+.img-strip {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    text-align: center;
+    background-color: rgb(23,23,23);
+    max-width: 100%;
+    
+}
+
+.img-strip h2{
+    color:  rgb(244,244,244);
+    margin: 20px 12px;
+    font-family: 'Raleway', sans-serif;
+    font-size: 26px;
+    padding: 20px;
+    font-weight: 300;
+}
