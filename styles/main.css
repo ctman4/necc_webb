@@ -24,7 +24,7 @@ html, body{
 }
 .wood-bg {
     min-height: 100vh;
-    background: linear-gradient(rgba(0, 0, 0, 0.596), rgba(0, 0, 0, 0.527)), url(wood-planks.jpg);
+    background: linear-gradient(rgba(0, 0, 0, 0.596), rgba(0, 0, 0, 0.527)), url(https://necoastalcontractors.com/images/wood-planks.jpg);
     width: 100%;
     background-position: center;
     background-size: cover;
