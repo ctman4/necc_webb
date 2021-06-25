@@ -1,5 +1,5 @@
 const mongoose = require('mongoose');
-const Pic = require('../models/pics');
+const Pic = require(__dirname + '../models/pics');
 
 module.exports.imagelists_renovations = function(request, response, next) {
   Pic.find().sort()
