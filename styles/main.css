@@ -73,7 +73,7 @@ nav{
     max-width: 50%;
 }
 nav button{
-    border-radius:0%
+    border-radius: none;
 }
 
 
