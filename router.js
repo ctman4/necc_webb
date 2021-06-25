@@ -25,13 +25,9 @@ const upload = multer({
 
 // Handle home-page requests
 router.get('/', function(request, response) {
-  response.render('index.ejs');
+  response.render(__dirname + '/views/index.ejs');
 });
 
-// Handle home-page requests
-router.get('/Logo-Marion', function(request, response) {
-  response.sendFile('../images/Logo-Marion.png');
-});
 
 /*
 router.post('/upload', upload.single('upload'), pics.upload);
@@ -51,11 +47,11 @@ router.get('/new', pics.imagelists_new);
 router.get('/outdoor', pics.imagelists_outdoor);
 */
 router.get('/contact', function(request, response) {
-  response.render('contact.ejs');
+  response.render(__dirname + '/views/contact.ejs');
 });
 
 router.get('/about', function(request, response) {
-  response.render('about.ejs');
+  response.render(__dirname + '/views/about.ejs');
 });
 
 module.exports = router;

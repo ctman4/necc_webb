@@ -3,6 +3,7 @@ const session = require('express-session');
 const router = require('./router');
 const app = express();
 
+
 app.set('view engine', 'ejs');
 app.set('views', './views');
 app.use(express.urlencoded({extended: true}));
@@ -13,10 +14,8 @@ app.use('/styles', express.static('styles'));
 app.use('/images', express.static('images'));
 app.use('/uploads', express.static('uploads'));
 
-
-app.get('/', (req, res) => {
-    res.render(__dirname + '/views/index.ejs');
-});
+//use router
+app.use('/', router);
 
 // Generate a session for each client
 app.use(session({
