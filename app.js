@@ -48,6 +48,7 @@ app.use(session({
 
 app.get('/', (req, res) => {
     res.render(__dirname + '/views/index.ejs');
+    console.log(res.body)
 });
 
 app.get('/necc-tools', requiresAuth(), (req, res) => {
