@@ -1,39 +1,39 @@
 const mongoose = require('mongoose');
-const Pic = require(__dirname + '../models/pics.js');
+const Pic = require('../models/pics');
 
 module.exports.imagelists_renovations = function(request, response, next) {
   Pic.find().sort()
-    .then(pics => response.render('https://necoastalcontractors/views/galleries/renovations.ejs', {pics: pics}))
+    .then(pics => response.render('galleries/renovations.ejs', {pics: pics}))
     .catch(error => console.log(error));
 };
 
 module.exports.imagelists_kitchens = function(request, response, next) {
   Pic.find().sort()
-    .then(pics => response.render('https://necoastalcontractors/views/galleries/kitchens.ejs', {pics: pics}))
+    .then(pics => response.render('galleries/kitchens.ejs', {pics: pics}))
     .catch(error => console.log(error));
 };
 
 module.exports.imagelists_baths = function(request, response, next) {
   Pic.find().sort()
-    .then(pics => response.render('https://necoastalcontractors/views/galleries/baths.ejs', {pics: pics}))
+    .then(pics => response.render('galleries/baths.ejs', {pics: pics}))
     .catch(error => console.log(error));
 };
 
 module.exports.imagelists_repair = function(request, response, next) {
   Pic.find().sort()
-    .then(pics => response.render('https://necoastalcontractors/views/galleries/repair.ejs', {pics: pics}))
+    .then(pics => response.render('galleries/repair.ejs', {pics: pics}))
     .catch(error => console.log(error));
 };
 
 module.exports.imagelists_cabinets = function(request, response, next) {
   Pic.find().sort()
-    .then(pics => response.render('https://necoastalcontractors/views/galleries/cabinets.ejs', {pics: pics}))
+    .then(pics => response.render('galleries/cabinets.ejs', {pics: pics}))
     .catch(error => console.log(error));
 };
 
 module.exports.imagelists_new = function(request, response, next) {
   Pic.find().sort()
-    .then(pics => response.render('https://necoastalcontractors/views/galleries/new.ejs', {pics: pics}))
+    .then(pics => response.render('galleries/new.ejs', {pics: pics}))
     .catch(error => console.log(error));
 };
 

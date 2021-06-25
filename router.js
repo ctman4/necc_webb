@@ -1,6 +1,6 @@
 const multer = require('multer');
 const express = require('express');
-//const pics = require('./controllers/pics');
+const pics = require('./controllers/pics');
 //allow local stuff to reference env variables
 const router = express.Router();
 
@@ -29,7 +29,7 @@ router.get('/', function(request, response) {
 });
 
 
-/*
+
 router.post('/upload', upload.single('upload'), pics.upload);
 
 router.get('/renovations', pics.imagelists_renovations);
@@ -45,7 +45,7 @@ router.get('/cabinets', pics.imagelists_cabinets);
 router.get('/new', pics.imagelists_new);
 
 router.get('/outdoor', pics.imagelists_outdoor);
-*/
+
 router.get('/contact', function(request, response) {
   response.render(__dirname + '/views/contact.ejs');
 });
