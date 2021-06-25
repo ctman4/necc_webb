@@ -4,7 +4,6 @@ const router = require('./router');
 const connect = require('./db');
 const app = express();
 
-
 app.set('view engine', 'ejs');
 app.set('views', './views');
 app.use(express.urlencoded({extended: true}));
@@ -21,6 +20,18 @@ app.use('/uploads', express.static('uploads'));
 //use router
 app.use('/', router);
 
+const { auth, requiresAuth } = require('express-openid-connect');
+app.use(
+  auth({
+    authRequired: false,
+    auth0Logout: true,
+    issuerBaseURL: process.env.ISSUER_BASE_URL,
+    baseURL: process.env.BASE_URL,
+    clientID: process.env.CLIENT_ID,
+    secret: process.env.SECRET,
+  })
+);
+
 // Generate a session for each client
 app.use(session({
     name: 'necc_web', // Name of client cookies
@@ -34,6 +45,11 @@ app.use(function(request, response, next) {
     response.locals.user = request.session.user;
     next();
   });
+
+app.get('/necc-tools', requiresAuth(), (req, res) => {
+console.log(__dirname + '/views/necc-tools.ejs');
+res.render(__dirname + '/views/necc-tools.ejs');
+});
 
 // Log requests to the console
 app.use(function(request, response, next) {
