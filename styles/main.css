@@ -72,6 +72,11 @@ nav{
     margin-right: auto;
     max-width: 50%;
 }
+nav button{
+    border-radius:0%
+}
+
+
 nav button:hover{
     background-color: #204714;
 
