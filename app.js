@@ -1,12 +1,16 @@
 const express = require('express');
 const session = require('express-session');
 const router = require('./router');
+const connect = require('./db');
 const app = express();
 
 
 app.set('view engine', 'ejs');
 app.set('views', './views');
 app.use(express.urlencoded({extended: true}));
+
+//connect to the database
+connect();
 
 //public folders
 app.use('/views', express.static('views'));
