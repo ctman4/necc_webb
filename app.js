@@ -1,4 +1,5 @@
 const express = require('express');
+const session = require('express-session');
 const app = express();
 
 app.set('view engine', 'ejs');
@@ -15,6 +16,20 @@ app.use('/uploads', express.static('uploads'));
 app.get('/', (req, res) => {
     res.render(__dirname + '/views/index.ejs');
 });
+
+// Generate a session for each client
+app.use(session({
+    name: 'necc_web', // Name of client cookies
+    secret: 'temporary', // Password for client cookies
+    resave: false, // Recommended setting
+    saveUninitialized: false // Recommended setting
+}));
+
+// Make user data available in all views
+app.use(function(request, response, next) {
+    response.locals.user = request.session.user;
+    next();
+  });
 
 // Log requests to the console
 app.use(function(request, response, next) {
