@@ -1,5 +1,6 @@
 const express = require('express');
 const session = require('express-session');
+const router = require('./router');
 const app = express();
 
 app.set('view engine', 'ejs');
