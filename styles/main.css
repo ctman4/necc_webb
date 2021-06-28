@@ -36,7 +36,7 @@ html, body{
     font-size: Large;
 
 }
-.navbar-nav>li {             /* <- this affects all navbars */
+.navbar-nav li {             /* <- this affects all navbars */
     float: none;
     text-align: center;
     display: inline-block;
