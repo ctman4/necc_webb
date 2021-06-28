@@ -74,7 +74,7 @@ input{
   font-weight:lighter;
 }
 
-button{
+.contact-writing button{
   width: 100%;
   border: none;
   outline: none;
@@ -89,7 +89,7 @@ button{
   transition: .3s ease background-color;
 }
 
-button:hover{
+.contact-writing button:hover{
   background-color: rgb(23,23,23);
   color:#fff;
 }
