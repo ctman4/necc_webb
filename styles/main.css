@@ -50,6 +50,7 @@ html, body{
 
 .hero img{
     margin: 0;
+    max-width: 60%;
     position: absolute;
     top: 50%;
     bottom: 50%;
@@ -76,9 +77,10 @@ html, body{
 }
 
 .slideshow img{
-  width: 100%;
+  width: auto;
   height: 80%;
   max-height: 600px;
+  max-width: 80%;
   filter: opacity(50%);
 
 }
