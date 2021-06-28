@@ -209,7 +209,8 @@ html, body{
     padding-bottom: 150px;
     display: flex;
     justify-content: center;
-    max-width: auto; /* Can be in percentage also. */
+    flex-direction: column;
+    max-width: 80%; /* Can be in percentage also. */
     height: auto;
     margin: 0 auto;
     position: relative;
