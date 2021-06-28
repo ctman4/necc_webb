@@ -67,13 +67,14 @@ html, body{
 }
 
 .slideshow{
-  padding-top: 50px;
-  padding-bottom: 50px;
-  max-width: 50%;
-  position: relative;
-  margin: auto;
-  text-align: center;
-
+  
+    padding-top: 50px;
+    padding-bottom: 50px;
+    max-width: 50%;
+    position: relative;
+    margin: auto;
+    text-align: center;
+  
 }
 
 .slideshow img{
@@ -81,7 +82,6 @@ html, body{
   height: 80%;
   max-height: 600px;
   filter: opacity(50%);
-
 
 }
 
@@ -191,7 +191,7 @@ html, body{
     transform: scale(0.9);
 }
 
-.about{
+.about2{
     background-color: rgb(244,244,244);
     height: auto;
     width: 100%;
@@ -203,8 +203,18 @@ html, body{
     padding-top: 300px;
     padding-bottom: 300px;
     text-align: center;
-    
-
+}
+.about{
+    padding-top: 150px;
+    padding-bottom: 150px;
+    display: flex;
+    justify-content: center;
+    max-width: auto; /* Can be in percentage also. */
+    height: auto;
+    margin: 0 auto;
+    position: relative;
+    align-items: center;
+    margin-bottom: auto;
 }
 
 .about-page{
@@ -254,7 +264,7 @@ html, body{
 
 
 #container {
-    max-width: 60%; /* Can be in percentage also. */
+    max-width: 80%; /* Can be in percentage also. */
     height: auto;
     margin: 0 auto;
     padding: 10px;
