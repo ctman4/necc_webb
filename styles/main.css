@@ -71,7 +71,7 @@ html, body{
 section{
     padding-top: 150px;
     padding-bottom: 150px;
-    display: flex;
+    
     justify-content: center;
     max-width: auto; /* Can be in percentage also. */
     height: auto;
