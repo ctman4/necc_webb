@@ -36,9 +36,7 @@ html, body{
     font-size: Large;
 
 }
-.nav .li {
-    padding-left: 5px;
-}
+
 .hero{
     background: linear-gradient(rgba(0, 0, 0, 0.596), rgba(0, 0, 0, 0.527)), url(https://necoastalcontractors.com/images/wood-planks.jpg);
     height: 80vh;
