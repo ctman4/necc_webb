@@ -50,6 +50,8 @@ html, body{
 
 .hero img{
     margin: 0;
+    max-width: 60%;
+    max-height: auto;
     position: absolute;
     top: 50%;
     bottom: 50%;
@@ -66,14 +68,17 @@ html, body{
   background-color: rgb(19,19,19);
 }
 
-.slideshow{
-  
-    padding-top: 50px;
-    padding-bottom: 50px;
-    max-width: 50%;
+section{
+    padding-top: 150px;
+    padding-bottom: 150px;
+    display: flex;
+    justify-content: center;
+    max-width: auto; /* Can be in percentage also. */
+    height: auto;
+    margin: 0 auto;
     position: relative;
-    margin: auto;
-    text-align: center;
+    align-items: center;
+    margin-bottom: auto;
   
 }
 
