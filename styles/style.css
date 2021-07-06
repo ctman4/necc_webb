@@ -73,6 +73,7 @@ nav ul li{
     list-style: none;
     margin: 10px 25px;
     font-weight: 2;
+    justify-content: space-around;
 
 }
 
