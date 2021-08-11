@@ -1,7 +1,9 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: sans-serif;
+    
 }
 
 *:before,
@@ -22,24 +24,13 @@ html, body{
     position: relative;
     padding-bottom: 300px; /* height of your footer */
 }
+
 .wood-bg {
     min-height: 100vh;
     background: linear-gradient(rgba(0, 0, 0, 0.596), rgba(0, 0, 0, 0.527)), url(https://necoastalcontractors.com/images/wood-planks.jpg);
     width: 100%;
     background-position: center;
     background-size: cover;
-}
-
-.navbar-brand{
-    font-family: 'Raleway', sans-serif;
-    color: rgb(244,244,244);
-    font-size: Large;
-
-}
-.navbar-nav li {             /* <- this affects all navbars */
-    float: none;
-    text-align: center;
-    display: inline-block;
 }
 
 
@@ -66,6 +57,202 @@ html, body{
 }
 
 
+
+/* --- NAV Styling --- */
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: 0.6s;
+    padding: 10px 50px;
+    z-index: 10000;
+    background:#183B10;
+    background: rgb(23,23,23);
+    flex-wrap: wrap; /*makes the navlinks go onto the second row
+                    when the hamburger is pressed. it wraps to the second row*/
+    
+}
+
+header.sticky
+{
+    padding: 5px 60px;
+    background: #fff;
+    
+}
+
+header .logo 
+{
+    position: relative;
+    font-weight: 700;
+    color: #fff;
+    text-decoration: none;
+    font-size: 2em;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    transition: 0.6s;
+}
+
+header .logo2 
+{
+    position: relative;
+    font-weight: 500;
+    color: #fff;
+    text-decoration: none;
+    font-size: 1em;
+    letter-spacing: 2px;
+    transition: 0.6s;
+}
+
+header ul li 
+{
+    position: relative;
+    list-style: none;
+    padding-top: 15px;
+}
+
+.nav-ul {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+header ul li a 
+{
+    position: relative;
+    margin: 0 15px;
+    text-decoration: none;
+    color: #fff;
+    Letter-spacing: 2px;
+    font-weight: 500px;
+    transition: 0.6s;
+
+}
+
+header.sticky .logo2 {
+    color: #000;
+    font-weight: 500;
+}
+header.sticky ul li a{
+    color: #000;
+    font-weight: 500;
+}
+header.sticky .hamburger {
+    color: #000;
+}
+
+header.sticky .dropbtn {
+    color: #000;
+    font-weight: 500;
+}
+
+.hamburger {
+    background-color: transparent;
+    border: 0;
+    color: white;
+    cursor: pointer;
+    font-size: 20px;
+    font-weight: 100;
+    /*hide the hamburger in desktop view*/
+    display: none;
+}
+
+.banner{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.596), rgba(0, 0, 0, 0.527)), url(wood-planks.jpg);
+    background-size: cover;
+}
+
+.drop {
+    overflow: hidden;
+    
+}
+
+.drop .dropbtn {
+    font-size: 16px;
+    Letter-spacing: 2px;
+    font-weight: 500px;
+    border: none;
+    outline: none;
+    color: white;
+    background-color: inherit;
+    font-family: inherit; /* Important for vertical align on mobile phones */
+    margin: 0 15px; /* Important for vertical align on mobile phones */
+    justify-content: center;
+    align-items: center;
+    padding-top: 15px;
+}
+
+
+/* Dropdown content (hidden by default) */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+    float: none;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+/* Add a grey background color to dropdown links on hover */
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
+
+/* Show the dropdown menu on hover */
+.drop:hover .dropdown-content {
+    display: block;
+}
+
+
+@media screen and (max-width: 767px) {
+    /* hide the nav when less than the width */
+    .nav-ul{
+        width: 100%;
+        flex-direction: column;
+        display: none;
+
+    }
+
+    .nav-ul.show {
+        display:flex;
+    }
+
+    .nav-ul.show li{
+        margin-top: 2em;
+    }
+
+    .drop .dropbtn {
+        margin-top: 2em;
+        margin-bottom: 1em  ;
+
+    }
+    .hamburger{
+        /*display the hamburger in mobile view*/
+        display: block;
+
+    }
+    
+}
+
 .upload-btn:hover{
     transform: scale(0.9);
 }
@@ -73,289 +260,395 @@ html, body{
   background-color: rgb(19,19,19);
 }
 
+
 .slideshow{
-  max-width: 80%;
-  padding-top: 50px;
-  padding-bottom: 50px;
-  position: relative;
-  text-align: center;
-  margin: 0 auto;
-
-}
-
-.slideshow img{
-  width: 100%;
-  height: 80%;
-  max-height: 600px;
-  filter: opacity(50%);
-
-}
-
-.slideshow .image-text{
-    color: rgb(244,244,244);
-    font-family: 'Raleway', sans-serif;
-    font-size: 22px;
-    font-weight: 400;
-    padding: 8px 12px;
-    position: absolute;
-    bottom: 8vh;
-    width: 100%;
+    max-width: 80%;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    position: relative;
     text-align: center;
-    text-decoration: underline;
-}
-
-.slideshow a{
-  color: rgb(244,244,244);
-}
-
-.slideshow h2{
+    margin: 0 auto;
+  
+  }
+  
+  .slideshow img{
+    width: 100%;
+    height: 80%;
+    max-height: 600px;
+    filter: opacity(50%);
+  
+  }
+  
+  .slideshow .image-text{
+      color: rgb(244,244,244);
+      font-family: 'Raleway', sans-serif;
+      font-size: 22px;
+      font-weight: 400;
+      padding: 8px 12px;
+      position: absolute;
+      bottom: 8vh;
+      width: 100%;
+      text-align: center;
+      text-decoration: underline;
+  }
+  
+  .slideshow a{
     color: rgb(244,244,244);
-    font-family: 'Raleway', sans-serif;
-    font-size: 26px;
-    margin-top: 100px;
-    font-weight: 300;
-    
-}
-
-.slideshow p{
-    color: #fff;
+  }
+  
+  .slideshow h2{
+      color: rgb(244,244,244);
+      font-family: 'Raleway', sans-serif;
+      font-size: 26px;
+      margin-top: 100px;
+      font-weight: 300;
+      
+  }
+  
+  .slideshow p{
+      color: #fff;
+      font-weight: 300;
+      font-size: 16px;
+      font-family: 'Raleway', sans-serif;
+      padding: 10px;
+      margin: 20px 40px;
+      padding-bottom: 75px;
+  
+  }
+  
+  .slideshow .fa{
+      padding:100px;
+      padding-bottom:0px;
+      font-size: 30px;
+  }
+  .contact{
+    padding-top: 0px;
+  }
+  
+  .contact-info p{
+    color: rgb(23,23,23);
     font-weight: 300;
     font-size: 16px;
-    font-family: 'Raleway', sans-serif;
+    margin: 20px 12px;
+    font-family: sans-serif;
     padding: 10px;
-    margin: 20px 40px;
-    padding-bottom: 75px;
-
-}
-
-.slideshow .fa{
-    padding:100px;
-    padding-bottom:0px;
-    font-size: 30px;
-}
-.contact{
-  padding-top: 0px;
-}
-
-.contact-info p{
-  color: rgb(23,23,23);
-  font-weight: 300;
-  font-size: 16px;
-  margin: 20px 12px;
-  font-family: sans-serif;
-  padding: 10px;
-}
-
-.contact-info i{
-  padding-top: 40px;
-}
-.contact-writing{
-  text-align: center;
-  color: rgb(23,23,23);
-  margin: 20px 12px;
-  font-family: 'Raleway', sans-serif;
-  font-size: 26px;
-  padding: 20px;
-  margin-bottom:20px;
-}
-
-.masonary{
-    display:flex;
-    flex-flow: column wrap;
-    max-height: 1500px;
-    margin: auto;
-    width: 100%;
-}
-.m-block{
-    width: 33.33%;
-    padding: 12px;
-    box-sizing: border-box
-}
-.m-block img{
-    width: 100%;
-    cursor: pointer;
-}
-.m-block img:hover{
-    transform: scale(1.05);
-}
-.explore-btn{
-    display: block;
-    width: 50%;
-    max-width: 350px;
-    background: #204714;
-    color: #fff;
-    text-decoration: none;
+  }
+  
+  .contact-info i{
+    padding-top: 40px;
+  }
+  .contact-writing{
     text-align: center;
-    padding: 14px 0;
-    border-radius: 30px;
-    margin: 60px auto;
-    font-size: 18px;
-    transition: transform 0.5s;
-}
+    color:rgb(244, 244, 244);
+    margin: 20px 12px;
+    font-family: 'Raleway', sans-serif;
+    font-size: 26px;
+    padding: 20px;
+    margin-bottom:20px;
+  }
+  
+  .masonary{
+      display:flex;
+      flex-flow: column wrap;
+      max-height: 1500px;
+      margin: auto;
+      width: 100%;
+  }
+  .m-block{
+      width: 33.33%;
+      padding: 12px;
+      box-sizing: border-box
+  }
+  .m-block img{
+      width: 100%;
+      cursor: pointer;
+  }
+  .m-block img:hover{
+      transform: scale(1.05);
+  }
+  .explore-btn{
+      display: block;
+      width: 50%;
+      max-width: 350px;
+      background: #204714;
+      color: #fff;
+      text-decoration: none;
+      text-align: center;
+      padding: 14px 0;
+      border-radius: 30px;
+      margin: 60px auto;
+      font-size: 18px;
+      transition: transform 0.5s;
+  }
+  
+  .explore-btn:hover{
+      transform: scale(0.9);
+  }
+  
+  .about2{
+      background-color: rgb(244,244,244);
+      height: auto;
+      width: 100%;
+      background-position: center;
+      background-size: cover;
+      box-sizing: border-box;
+      padding-left: 20%;
+      padding-right: 20%;
+      padding-top: 300px;
+      padding-bottom: 300px;
+      text-align: center;
+  }
+  .about{
+      padding-top: 150px;
+      padding-bottom: 150px;
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      max-width: 80%; /* Can be in percentage also. */
+      height: auto;
+      margin: 0 auto;
+      position: relative;
+      align-items: center;
+      margin-bottom: auto;
+  }
+  
+  .about-page{
+      background-color: rgb(244,244,244);
+      width: 60%;
+      max-width: auto;
+      background-position: center;
+      background-size: cover;
+      box-sizing: border-box;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      text-align: center;
+      margin: auto;
+      margin-top: 20%;
+      margin-bottom: 20%;
+      height: auto;
+      padding: 10px;
+      position: relative;
+      align-items: center;
+  }
+  
+  .about img {
+      max-width: 80%;
+      padding-bottom: 40px;
+      
+  }
+  
+  
+  .about h2{
+      color: rgb(23,23,23);
+      margin: 20px 12px;
+      font-family: 'Raleway', sans-serif;
+      font-size: 26px;
+      padding: 20px;
+  }
+  
+  .about p{
+      color: rgb(23,23,23);
+      font-weight: light;
+      font-size: 16px;
+      margin: 20px 12px;
+      font-family: sans-serif;
+      
+  
+  }
+  
+  
+  
+  #container {
+      max-width: 80%; /* Can be in percentage also. */
+      height: auto;
+      margin: 0 auto;
+      padding: 10px;
+      position: relative;
+      align-items: center;
+  }
+  
+  .btn-spacer{
+      padding: 5% 0;
+  }
+  .fa {
+    color: white;
+  }
+  
+  footer{
+      font-family: sans-serif;
+      padding-top: 50px;
+      color: rgb(244,244,244);
+      background-color:rgb(19,19,19);
+      text-align: center;
+      text-decoration: none;
+      font-style: normal;
+      font-weight:500;
+      bottom: 0;
+      position: absolute;
+      width: 100%;
+  }
+  
+  footer a{
+      padding: 15px;
+      padding-bottom:50px;
+      width: 50px;
+      color: white;
+  
+  }
+  
+  footer p{
+      padding: 10px;
+  }
+  
+  footer .fa{
+      font-size: 20px;
+      color: rgb(244,244,244);
+  }
+  
+  /* Add a hover effect if you want */
+  footer .fa:hover {
+    opacity: 0.7;
+  }
+  
+  .gallery {
+    margin: 100px 50px;
+  }
+  .gallery img {
+    transition: 1s;
+    padding-bottom: 50px;;
+    max-width: 100%;
+    align-self: center;
+    border: 5px rgb(244, 244, 244);
+  }
+  
+  .gallery img:hover {
+    transform: scale(1.1);
+  }
+  
+  .img-container {
+    text-align: center;
+  
+  }
+  
+  .img-strip {
+      padding-top: 50px;
+      padding-bottom: 50px;
+      text-align: center;
+      background-color: rgb(23,23,23);
+      max-width: 100%;
+      
+  }
+  
+  .img-strip h2{
+      color:  rgb(244,244,244);
+      margin: 20px 12px;
+      font-family: 'Raleway', sans-serif;
+      font-size: 26px;
+      padding: 50px;
+      font-weight: 300;
+  }
+  
+  /* --- Messaging styling --- */
 
-.explore-btn:hover{
-    transform: scale(0.9);
-}
-
-.about2{
-    background-color: rgb(244,244,244);
-    height: auto;
-    width: 100%;
-    background-position: center;
-    background-size: cover;
+  *{
+    padding: 0;
+    margin: 0;
     box-sizing: border-box;
-    padding-left: 20%;
-    padding-right: 20%;
-    padding-top: 300px;
-    padding-bottom: 300px;
-    text-align: center;
-}
-.about{
+  }
+  body{
+    font-family: sans-serif;
+  }
+  section{
     padding-top: 150px;
     padding-bottom: 150px;
     display: flex;
     justify-content: center;
-    flex-direction: column;
-    max-width: 80%; /* Can be in percentage also. */
+    max-width: auto; /* Can be in percentage also. */
     height: auto;
     margin: 0 auto;
     position: relative;
     align-items: center;
     margin-bottom: auto;
-}
+  }
 
-.about-page{
-    background-color: rgb(244,244,244);
-    width: 60%;
-    max-width: auto;
-    background-position: center;
-    background-size: cover;
-    box-sizing: border-box;
-    padding-top: 50px;
-    padding-bottom: 50px;
-    text-align: center;
-    margin: auto;
-    margin-top: 20%;
-    margin-bottom: 20%;
-    height: auto;
-    padding: 10px;
-    position: relative;
-    align-items: center;
-}
-
-.about img {
-    max-width: 80%;
-    padding-bottom: 40px;
-    
-}
-
-
-.about h2{
-    color: rgb(23,23,23);
+  .messaging h2{
+    color: rgb(244,244,244);
     margin: 20px 12px;
     font-family: 'Raleway', sans-serif;
     font-size: 26px;
     padding: 20px;
-}
-
-.about p{
-    color: rgb(23,23,23);
-    font-weight: light;
+  }
+  
+  .messaging h3{
+    color: rgb(244,244,244);
+    font-weight: 300;
     font-size: 16px;
     margin: 20px 12px;
     font-family: sans-serif;
-    
+    padding: 10px;
+  }
 
-}
-
-
-
-#container {
-    max-width: 80%; /* Can be in percentage also. */
-    height: auto;
+  .messaging .container{
+    width: 90%;
+    max-width: 500px;
     margin: 0 auto;
-    padding: 10px;
-    position: relative;
-    align-items: center;
-}
-
-.btn-spacer{
-    padding: 5% 0;
-}
-.fa {
-  color: white;
-}
-
-footer{
-    font-family: sans-serif;
-    padding-top: 50px;
-    color: rgb(244,244,244);
-    background-color:rgb(19,19,19);
+    padding: 20px;
+    box-shadow: 0px 0px 20px #00000010;
+    background-color: rgb(244,244,244);
+    border-radius: 0px;
+    margin-bottom: 60px;
+    margin-top: 40px;
     text-align: center;
-    text-decoration: none;
-    font-style: normal;
-    font-weight:500;
-    bottom: 0;
-    position: absolute;
+  }
+
+  .form-group{
     width: 100%;
-}
-
-footer a{
-    padding: 15px;
-    padding-bottom:50px;
-    width: 50px;
-    color: white;
-
-}
-
-footer p{
-    padding: 10px;
-}
-
-footer .fa{
+    margin-top: 20px;
     font-size: 20px;
-    color: rgb(244,244,244);
-}
+  }
 
-/* Add a hover effect if you want */
-footer .fa:hover {
-  opacity: 0.7;
-}
-
-.gallery {
-  margin: 100px 50px;
-}
-.gallery img {
-  transition: 1s;
-  padding-bottom: 50px;;
-  max-width: 100%;
-  align-self: center;
-  border: 5px rgb(244, 244, 244);
-}
-
-.gallery img:hover {
-  transform: scale(1.1);
-}
-
-.img-container {
-  text-align: center;
-
-}
-
-.img-strip {
-    padding-top: 50px;
-    padding-bottom: 50px;
+  .form-group input,
+  .form-group textarea{
+    width: 100%;
+    padding: 5px;
+    font-size: 16px;
+    border: 1px solid rgba(128,128,128,0.199);
+    margin-top: 5px;
+  }
+  
+  textarea{
+    resize: vertical;
+    font-family: sans-serif;
+    font-size: 10px;
+    font-weight:lighter;
+  }
+  
+  input{
+    font-family: sans-serif;
+    font-size: 10px;
+    font-weight:lighter;
+  }
+  
+  .contact-writing button{
+    width: 100%;
+    border: none;
+    outline: none;
+    padding: 20px;
+    font-size: 20px;
+    border-radius: 0px;
+    font-family: sans-serif;
+    color: rgb(23,23,23);
     text-align: center;
-    background-color: rgb(23,23,23);
-    max-width: 100%;
+    cursor: pointer;
     
-}
+    transition: .3s ease background-color;
+  }
+  
+  .contact-writing button:hover{
+    background-color: rgb(23,23,23);
+    color:#fff;
+  }
+  
 
-.img-strip h2{
-    color:  rgb(244,244,244);
-    margin: 20px 12px;
-    font-family: 'Raleway', sans-serif;
-    font-size: 26px;
-    padding: 50px;
-    font-weight: 300;
-}
+  
+  

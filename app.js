@@ -17,7 +17,7 @@ app.use('/views', express.static('views'));
 app.use('/styles', express.static('styles'));
 app.use('/images', express.static('images'));
 app.use('/uploads', express.static('uploads'));
-
+app.use('/scripts', express.static('scripts'));
 //use router
 app.use('/', router);
 

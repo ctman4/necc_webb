@@ -54,4 +54,7 @@ router.get('/about', function(request, response) {
   response.render(__dirname + '/views/about.ejs');
 });
 
+router.get('/nav', function(request, response) {
+  response.render(__dirname + './nav.js');
+});
 module.exports = router;
