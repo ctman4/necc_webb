@@ -72,9 +72,15 @@ header {
     padding: 10px 50px;
     z-index: 10000;
     background:#183B10;
-    background: rgb(23,23,23);
+    color: rgb(244,244,244);
     flex-wrap: wrap; /*makes the navlinks go onto the second row
                     when the hamburger is pressed. it wraps to the second row*/
+    
+}
+
+header a:hover
+{
+    color: #193;
     
 }
 
@@ -85,11 +91,17 @@ header.sticky
     
 }
 
+header.sticky a:hover
+{
+    color: #193;
+    
+}
+
 header .logo 
 {
     position: relative;
     font-weight: 700;
-    color: #fff;
+    color: rgb(19,19,19);
     text-decoration: none;
     font-size: 2em;
     text-transform: uppercase;
@@ -128,27 +140,28 @@ header ul li a
     position: relative;
     margin: 0 15px;
     text-decoration: none;
-    color: #fff;
+    color: white;
     Letter-spacing: 2px;
     font-weight: 500px;
     transition: 0.6s;
 
 }
 
+
 header.sticky .logo2 {
-    color: #000;
+    color: rgb(19,19,19);
     font-weight: 500;
 }
 header.sticky ul li a{
-    color: #000;
+    color: rgb(19,19,19);
     font-weight: 500;
 }
 header.sticky .hamburger {
-    color: #000;
+    color: rgb(19,19,19);
 }
 
 header.sticky .dropbtn {
-    color: #000;
+    color: rgb(19,19,19);
     font-weight: 500;
 }
 
@@ -322,31 +335,50 @@ header.sticky .dropbtn {
       font-size: 30px;
   }
   .contact{
-    padding-top: 0px;
+    padding-top: 150px;
+    
   }
+
   
   .contact-info p{
-    color: rgb(23,23,23);
+    color: rgb(244, 244, 244);
     font-weight: 300;
     font-size: 16px;
     margin: 20px 12px;
     font-family: sans-serif;
-    padding: 10px;
+    padding: 5px 10px;
   }
   
   .contact-info i{
-    padding-top: 40px;
+    padding-top: 80px;
   }
   .contact-writing{
     text-align: center;
     color:rgb(244, 244, 244);
-    margin: 20px 12px;
     font-family: 'Raleway', sans-serif;
     font-size: 26px;
-    padding: 20px;
-    margin-bottom:20px;
+    padding-top: 100px;
+   
   }
-  
+  .contact h2 
+  {
+      text-decoration: underline;
+  }
+  .contact-writing h3{
+    font-weight: 300;
+    font-size: 16px;
+    margin: 10px 12px;
+    font-family: sans-serif;
+    padding-top: 50px;
+   
+  }
+  .contact section{
+      padding-top: 0%;
+  }
+
+  .contact form{
+      margin: 0 30%;
+  }
   .masonary{
       display:flex;
       flex-flow: column wrap;
@@ -409,7 +441,7 @@ header.sticky .dropbtn {
       margin: 0 auto;
       position: relative;
       align-items: center;
-      margin-bottom: auto;
+      
   }
   
   .about-page{
@@ -426,9 +458,10 @@ header.sticky .dropbtn {
       margin-top: 20%;
       margin-bottom: 20%;
       height: auto;
-      padding: 10px;
+      padding: 50px;
       position: relative;
       align-items: center;
+      border-radius: 10px;
   }
   
   .about img {
@@ -541,11 +574,13 @@ header.sticky .dropbtn {
   
   .img-strip h2{
       color:  rgb(244,244,244);
-      margin: 20px 12px;
+      margin-top: 100px 12px;
       font-family: 'Raleway', sans-serif;
       font-size: 26px;
-      padding: 50px;
+      scroll-padding-top: 100px;
       font-weight: 300;
+      padding-top: 150px;
+      letter-spacing: 2px;
   }
   
   /* --- Messaging styling --- */
@@ -572,7 +607,7 @@ header.sticky .dropbtn {
   }
 
   .messaging h2{
-    color: rgb(244,244,244);
+    color: rgb(19,19,19);
     margin: 20px 12px;
     font-family: 'Raleway', sans-serif;
     font-size: 26px;
@@ -580,7 +615,7 @@ header.sticky .dropbtn {
   }
   
   .messaging h3{
-    color: rgb(244,244,244);
+    color: rgb(19,19,19);
     font-weight: 300;
     font-size: 16px;
     margin: 20px 12px;
@@ -591,7 +626,6 @@ header.sticky .dropbtn {
   .messaging .container{
     width: 90%;
     max-width: 500px;
-    margin: 0 auto;
     padding: 20px;
     box-shadow: 0px 0px 20px #00000010;
     background-color: rgb(244,244,244);
