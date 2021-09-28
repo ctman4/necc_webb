@@ -282,7 +282,8 @@ header.sticky .dropbtn {
     padding-bottom: 50px;
     position: relative;
     text-align: center;
-    margin: 0 auto;
+
+    margin: auto auto;
   
   }
   
