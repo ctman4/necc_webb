@@ -291,6 +291,7 @@ header.sticky .dropbtn {
     height: 80%;
     max-height: 80%;
     filter: opacity(50%);
+    margin: auto auto;
   
   }
   
