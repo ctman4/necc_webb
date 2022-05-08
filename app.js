@@ -26,6 +26,12 @@ app.use(
   auth({
     authRequired: false,
     auth0Logout: true,
+    session: {
+      //@ts-ignore
+      cookie: {
+        domain: process.env.BASE_URL,
+      }
+    },
     issuerBaseURL: process.env.ISSUER_BASE_URL,
     baseURL: process.env.BASE_URL,
     clientID: process.env.CLIENT_ID,
