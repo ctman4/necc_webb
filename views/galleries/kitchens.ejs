@@ -19,11 +19,11 @@
     <% const Pic = include('../../models/pics.js'); %>
     <div class = "container img-strip">
       <h2>Project Gallery - Kitchen</h2>
-    <%_ for (const pic of pics) { -%>
+    <%_ for (var i = pics.length - 1; i >= 0; i--) { -%>
       <div class="gallery">
-        <%_ if (pic.type === "kitchen") { -%>
+        <%_ if (pics[i].type === "kitchen") { -%>
           <div class="img-container">
-            <img src="../uploads/<%=pic.file-%>" alt="image" >
+            <img src="../uploads/<%=pics[i].file-%>" alt="image" >
           </div>
         <%_ }; -%>
       </div>

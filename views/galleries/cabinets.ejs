@@ -19,15 +19,15 @@
     <% const Pic = include('../../models/pics.js'); %>
     <div class = "img-strip">
       <h2>Project Gallery - Cabinetry & Millwork</h2>
-    <%_ for (const pic of pics) { -%>
-      <div class="gallery">
-        <%_ if (pic.type === "cabinet") { -%>
-          <div class="img-container">
-            <img src="../uploads/<%=pic.file-%>" alt="image" >
-          </div>
-        <%_ }; -%>
-      </div>
-    <%_ }; -%>
+      <%_ for (var i = pics.length - 1; i >= 0; i--) { -%>
+        <div class="gallery">
+          <%_ if (pics[i].type === "cabinet") { -%>
+            <div class="img-container">
+              <img src="../uploads/<%=pics[i].file-%>" alt="image" >
+            </div>
+          <%_ }; -%>
+        </div>
+      <%_ }; -%>
     </div>
 
 
