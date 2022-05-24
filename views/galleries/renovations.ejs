@@ -17,10 +17,10 @@
     <%- include('../nav.ejs'); -%>
     
     <% const Pic = include('../../models/pics.js'); %>
-    pics = pics.reverse;
+    const rev_pics = pics.reverse;
     <div class = "container img-strip">
       <h2>Project Gallery - Renovations</h2>
-    <%_ for (const pic of pics) { -%>
+    <%_ for (const pic of rev_pics) { -%>
       <div class="gallery">
         <%_ if (pic.type === "renovation") { -%>
           <div class="img-container">
