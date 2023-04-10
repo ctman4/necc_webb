@@ -27,8 +27,14 @@ const upload = multer({
 router.get('/', function(request, response) {
   response.render(__dirname + '/views/index.ejs');
 });
-
-
+router.delete('/delete/:id', pics.deleteImage, (error, request, response, next) => {
+  if (error.name === 'CastError') {
+    // The provided ID is not valid, return a 400 Bad Request error
+    return response.status(400).send('Invalid image ID.');
+  }
+  // Pass the error to the next middleware
+  next(error);
+});
 
 router.post('/upload', upload.single('upload'), pics.upload);
 
@@ -38,13 +44,24 @@ router.get('/kitchens', pics.imagelists_kitchens);
 
 router.get('/baths', pics.imagelists_baths);
 
-router.get('/repair', pics.imagelists_repair);
-
 router.get('/cabinets', pics.imagelists_cabinets);
 
 router.get('/new', pics.imagelists_new);
 
 router.get('/outdoor', pics.imagelists_outdoor);
+
+router.get('/tools-renovations', pics.tools_imagelists_renovations);
+
+router.get('/tools-kitchens', pics.tools_imagelists_kitchens);
+
+router.get('/tools-baths', pics.tools_imagelists_baths);
+
+router.get('/tools-cabinets', pics.tools_imagelists_cabinets);
+
+router.get('/tools-new', pics.tools_imagelists_new);
+
+router.get('/tools-outdoor', pics.tools_imagelists_outdoor);
+
 
 router.get('/contact', function(request, response) {
   response.render(__dirname + '/views/contact.ejs');
